@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vehicle Details · JMT Auto Rentals</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/features.css">
+    <script defer src="js/script.js"></script>
+    <script defer src="js/details.js"></script>
+    <link rel="icon" href="images/favicon.ico?v=2" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=2">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/brand-redesign.css">
+</head>
+
+<body data-page="details">
+    <header class="site-header">
+        <div class="nav-wrap container"><a class="brand" href="index.html" aria-label="JMT Auto Rentals home">
+                <img class="brand-icon" src="images/jmt-icon.webp" alt="" width="46" height="46">
+                <span class="brand-name"><b>JMT</b><small>AUTO RENTALS</small></span>
+            </a><button id="menu-toggle"
+                class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
+                aria-controls="site-nav"><span></span><span></span><span></span></button>
+            <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a class="is-current" href="vehicles.html" aria-current="page">Vehicles</a>
+                <a href="availability.html">Availability</a>
+                <a href="reservations.html">My Requests</a>
+                <a href="about.html">About</a>
+                <a class="nav-cta " href="booking.html">Request a Ride</a>
+                <a class="nav-signin " href="admin-login.html">Sign In</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container jmt-detail-shell"><a class="jmt-back" href="vehicles.html">← Back to the showroom</a>
+        <div class="jmt-detail-grid">
+            <div class="jmt-detail-left">
+                <section class="jmt-panel"><button class="jmt-photo-main" type="button" id="jmt-photo-zoom"
+                        aria-label="Enlarge vehicle image"><img id="jmt-photo-main" src="images/vios-cutout.png"
+                            alt="Vehicle image"></button>
+                    <div class="jmt-photo-thumbs" id="jmt-photo-thumbs"></div><small class="fine-print">Model renderings
+                        are illustrative. Add verified JMT photographs to show the actual front, side, rear, and
+                        interior.</small>
+                </section>
+                <section class="jmt-panel">
+                    <div id="jmt-detail-calendar"></div>
+                </section>
+            </div>
+            <aside class="jmt-panel">
+                <p class="eyebrow">SELECTED VEHICLE</p>
+                <h1 id="jmt-detail-title" class="jmt-detail-title">Loading…</h1>
+                <p id="jmt-detail-tag" class="eyebrow"></p>
+                <p id="jmt-detail-description" class="jmt-detail-desc"></p>
+                <div id="jmt-detail-spec" class="jmt-detail-spec"></div>
+                <p class="eyebrow">ESTIMATED DAILY RATE</p>
+                <p id="jmt-detail-rate" class="jmt-detail-rate">—</p>
+                <div class="jmt-detail-dates"><label>Pick-up Date<input id="jmt-detail-start" type="date"
+                            required></label><label>Return Date<input id="jmt-detail-end" type="date" required></label>
+                </div>
+                <p id="jmt-detail-status" class="jmt-detail-status" role="status"></p>
+                <p class="jmt-detail-estimate">Estimated total: <span id="jmt-detail-estimate">—</span></p><button
+                    id="jmt-detail-book" class="button button-red jmt-detail-book" type="button">Continue to Booking
+                    ↗</button>
+                <div class="jmt-return-note"><b>Full tank:</b> Return with a full tank.<br><b>Carwash:</b> Return the
+                    vehicle washed and cleaned; an unwashed return incurs a cleaning charge.<br>Amounts and final
+                    policies must be confirmed with JMT Auto Rentals.</div>
+                <p class="fine-print">This is a classroom demo, not a confirmed rental.</p>
+            </aside>
+        </div>
+    </main>
+    <dialog id="jmt-photo-dialog" class="jmt-photo-dialog"><button id="jmt-photo-close" class="jmt-photo-close"
+            type="button">Close ×</button><img id="jmt-photo-large" alt="Enlarged car image"></dialog>
+    <div id="toast" class="toast" role="status"></div>
+</body>
+
+</html>

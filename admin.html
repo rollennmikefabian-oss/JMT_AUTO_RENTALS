@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0c1015">
+    <title>Staff Workspace · JMT Auto Rentals</title>
+    <link rel="icon" href="images/favicon.ico?v=2" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=2">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/features.css">
+    <link rel="stylesheet" href="css/workflow.css">
+    <link rel="stylesheet" href="css/admin-upgrade.css">
+    <link rel="stylesheet" href="css/brand-redesign.css">
+    <script defer src="js/script.js"></script>
+    <script defer src="js/admin.js"></script>
+    <script defer src="js/admin-upgrade.js"></script>
+</head>
+<body data-page="admin">
+    <header class="site-header staff-header">
+        <div class="nav-wrap container">
+            <a class="brand" href="index.html" aria-label="JMT Auto Rentals public website">
+                <img class="brand-icon" src="images/jmt-icon.webp" alt="" width="46" height="46">
+                <span class="brand-name"><b>JMT</b><small>AUTO RENTALS</small></span>
+            </a>
+            <div class="staff-header-label"><span class="staff-live-dot"></span> Staff workspace <span class="staff-demo-badge">DEMO</span></div>
+            <nav class="staff-nav" aria-label="Staff actions">
+                <a href="index.html">← Public website</a>
+                <button id="staff-logout" type="button">Sign out</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="staff-app" id="staff-dashboard" hidden>
+        <aside class="staff-sidebar" aria-label="Dashboard navigation">
+            <p class="staff-sidebar-kicker">WORKSPACE</p>
+            <div id="staff-sidebar-nav"></div>
+            <div class="staff-sidebar-bottom">
+                <img src="images/jmt-icon.webp" alt="" width="42" height="42">
+                <div><b>JMT Auto Rentals</b><small>Operations prototype</small></div>
+            </div>
+        </aside>
+
+        <div class="staff-content">
+            <div class="staff-page-heading">
+                <div>
+                    <p class="eyebrow">FLEET OPERATIONS <span class="staff-heading-separator">/</span> 2026</p>
+                    <h1>Command center<span>.</span></h1>
+                    <p>Manage booking decisions, vehicle availability and returns from one workspace.</p>
+                </div>
+                <div class="staff-heading-icon"><img src="images/jmt-icon.webp" alt=""></div>
+            </div>
+
+            <p class="jmt-admin-warning">
+                <b>Classroom prototype:</b> this staff interface uses browser-only records and a simulated login.
+                It is not secure authentication or live rental management. Do not enter real customer information.
+            </p>
+
+            <div class="jmt-admin-stats staff-stat-grid" aria-label="Fleet overview">
+                <div class="jmt-admin-card"><span>Vehicles in fleet</span><strong id="jmt-count-fleet">—</strong><small>Sample inventory</small></div>
+                <div class="jmt-admin-card"><span>Available today</span><strong id="jmt-count-available">—</strong><small>Not held or blocked</small></div>
+                <div class="jmt-admin-card"><span>Awaiting review</span><strong id="jmt-count-pending">—</strong><small>Pending requests</small></div>
+                <div class="jmt-admin-card"><span>Active reservations</span><strong id="jmt-count-bookings">—</strong><small>Approved / ongoing</small></div>
+            </div>
+
+            <div class="staff-overview-note" id="staff-overview-note">
+                <div><p class="eyebrow">YOUR NEXT STEP</p><h2>Everything in one place.</h2>
+                    <p>Review new rental requests, inspect vehicle calendars, and update fleet availability. Select an action below to get started.</p>
+                </div>
+                <div class="staff-overview-art"><img src="images/jmt-chrome-logo.webp" alt=""></div>
+            </div>
+
+            <section class="jmt-admin-section" aria-label="Reservations management">
+                <div class="staff-section-heading">
+                    <div><p class="eyebrow">01 / REQUEST DESK</p><h2>Rental requests</h2>
+                        <p class="staff-section-description">Review pending requests, open details or update their status.</p>
+                    </div>
+                    <label>Filter requests
+                        <select id="staff-status-filter">
+                            <option value="All">All requests</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Approved">Approved</option>
+                            <option value="Rejected">Rejected</option>
+                            <option value="Ongoing">Ongoing</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Cancelled">Cancelled</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="table-scroll">
+                    <table class="data-table staff-requests-table">
+                        <caption>Anonymous demonstration requests stored on this device</caption>
+                        <thead><tr>
+                            <th scope="col">Reference</th>
+                            <th scope="col">Vehicle</th>
+                            <th scope="col">Rental schedule</th>
+                            <th scope="col">Estimate</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Staff actions</th>
+                        </tr></thead>
+                        <tbody id="jmt-admin-records"></tbody>
+                    </table>
+                </div>
+                <p id="staff-action-message" class="staff-action-message" role="status" aria-live="polite"></p>
+                <p class="fine-print">Pending and approved requests hold the dates in this browser; rejected and cancelled requests release them.</p>
+            </section>
+
+            <section class="jmt-admin-section" aria-label="Fleet scheduling">
+                <div class="jmt-admin-calendar-head">
+                    <div><p class="eyebrow">02 / FLEET SCHEDULING</p><h2>Rental activity calendar</h2>
+                        <p class="staff-section-description">Filter by vehicle and click a day to see rental and maintenance activity.</p>
+                    </div>
+                    <div class="jmt-admin-month-actions">
+                        <button id="jmt-admin-prev" type="button" aria-label="Previous month">‹</button>
+                        <strong id="jmt-admin-month"></strong>
+                        <button id="jmt-admin-next" type="button" aria-label="Next month">›</button>
+                    </div>
+                </div>
+                <div class="jmt-cal-week" aria-hidden="true">
+                    <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+                </div>
+                <div id="jmt-admin-days" class="jmt-admin-days"></div>
+                <div class="staff-cal-legend"><span class="staff-key-busy"></span> Held by request <span class="staff-key-maint"></span> Maintenance / unavailable</div>
+                <p id="staff-calendar-detail" class="staff-action-message" role="status">Choose a calendar day for details.</p>
+            </section>
+
+            <section class="jmt-admin-section" aria-label="Fleet management">
+                <div class="staff-section-heading">
+                    <div><p class="eyebrow">03 / INVENTORY CONTROL</p><h2>Manage vehicles</h2>
+                        <p class="staff-section-description">Update overall vehicle status and block dates for maintenance.</p>
+                    </div>
+                </div>
+                <div id="staff-fleet-overview" class="staff-fleet-overview"></div>
+                <p class="fine-print">These are illustrative vehicles and rates. Changes apply to this browser only.</p>
+            </section>
+        </div>
+    </main>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,251 @@
+/* JMT staff workspace extensions — readable, responsive CSS. */
+.staff-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 24px 0;
+    padding: 7px;
+    border: 1px solid #e2e3e3;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.staff-tabs button {
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: #4e595e;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.staff-tabs button.active {
+    background: #20282c;
+    color: #fff;
+}
+
+/* Overview shortcuts */
+.staff-quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 18px 0 25px;
+}
+
+.staff-quick-links button {
+    padding: 13px 17px;
+    border: 1px solid #d7dbdd;
+    border-radius: 9px;
+    background: #fff;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.staff-quick-links button:hover {
+    border-color: #d92732;
+}
+
+.staff-calendar-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #555;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.staff-calendar-filter select,
+.staff-fleet-card select,
+.staff-maintenance-form input,
+.staff-maintenance-form select,
+.staff-dialog select,
+.staff-dialog textarea {
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid #cfd3d4;
+    border-radius: 7px;
+    background: #fff;
+    color: #222;
+    font: inherit;
+}
+
+.jmt-admin-day.maintenance {
+    background: #f8dbd2;
+    color: #9c3f1d;
+    outline: 1px solid #e9a788;
+}
+
+.staff-fleet-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+    border: 1px solid #e0e3e4;
+    border-radius: 11px;
+    background: #fff;
+}
+
+.staff-fleet-card img {
+    width: 100%;
+    height: 145px;
+    object-fit: contain;
+    background: #f1f2f2;
+    border-radius: 8px;
+}
+
+.staff-fleet-card strong,
+.staff-fleet-card small {
+    display: block;
+}
+
+.staff-fleet-card small {
+    margin-top: 5px;
+    color: #687176;
+    font-size: 11px;
+}
+
+.staff-maintenance-box {
+    margin-top: 25px;
+    padding: 21px;
+    border: 1px solid #e1e4e5;
+    border-radius: 12px;
+    background: #f9fafa;
+}
+
+.staff-maintenance-box h3 {
+    margin-top: 0;
+}
+
+.staff-maintenance-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.staff-maintenance-form label,
+.staff-dialog label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color: #374247;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.staff-primary {
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 7px;
+    background: #cf2635;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.staff-maintenance-record {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 12px;
+    margin-top: 9px;
+    border: 1px solid #e5e7e7;
+    background: #fff;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.staff-maintenance-record button {
+    padding: 7px 12px;
+    color: #a32630;
+    background: #fff0f1;
+    border: 1px solid #edc6cb;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.staff-dialog {
+    width: min(92vw, 590px);
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 28px;
+    border: 0;
+    border-radius: 16px;
+    background: #fff;
+    color: #222;
+    box-shadow: 0 28px 80px #0005;
+}
+
+.staff-dialog::backdrop {
+    background: #0c1111b0;
+}
+
+.staff-dialog-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.staff-dialog-top h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.staff-dialog-top button {
+    border: 0;
+    background: transparent;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.staff-dialog form {
+    display: grid;
+    gap: 16px;
+}
+
+.staff-details-list div {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #edf0f0;
+}
+
+.staff-details-list dt {
+    color: #687276;
+    font-size: 12px;
+}
+
+.staff-details-list dd {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 650px) {
+    .staff-tabs {
+        flex-direction: column;
+    }
+
+    .staff-maintenance-form {
+        grid-template-columns: 1fr;
+    }
+
+    .staff-maintenance-record {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .staff-dialog {
+        padding: 18px;
+    }
+
+    .staff-details-list div {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+}

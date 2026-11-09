@@ -1,0 +1,555 @@
+/* New vehicle details, calendar and demo dashboard — ITWS 02 Units 6 & 7 */
+[hidden] {
+    display: none !important
+}
+
+.jmt-calendar {
+    margin-top: 22px;
+    padding: 20px;
+    border: 1px solid #dfe2e2;
+    border-radius: 13px;
+    background: #fafbf9;
+    color: #22282a
+}
+
+.jmt-cal-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap
+}
+
+.jmt-cal-head h3 {
+    font-size: 19px;
+    margin: 0
+}
+
+.jmt-cal-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.jmt-cal-nav strong {
+    min-width: 128px;
+    text-align: center;
+    font-size: 13px
+}
+
+.jmt-cal-nav button {
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border: 1px solid #dbdfdf;
+    border-radius: 8px;
+    font-size: 23px;
+    cursor: pointer
+}
+
+.jmt-cal-nav button:disabled {
+    opacity: .3;
+    cursor: default
+}
+
+.jmt-cal-hint,
+.jmt-cal-disclaimer {
+    display: block;
+    font-size: 12px;
+    color: #6a7374;
+    line-height: 1.6;
+    margin: 12px 0
+}
+
+.jmt-cal-disclaimer {
+    margin-top: 10px
+}
+
+.jmt-cal-week,
+.jmt-cal-days {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 5px
+}
+
+.jmt-cal-week span {
+    text-align: center;
+    color: #6b7174;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 13px 0 7px
+}
+
+.jmt-cal-day,
+.jmt-cal-empty {
+    height: 45px;
+    min-width: 0;
+    border-radius: 7px
+}
+
+.jmt-cal-day {
+    font-size: 12px;
+    font-weight: 800;
+    border: 1px solid transparent
+}
+
+.jmt-cal-day.open {
+    background: #e5f4ea;
+    border-color: #a8d6ba;
+    color: #1b7143;
+    cursor: pointer
+}
+
+.jmt-cal-day.open:hover {
+    background: #bbebc9
+}
+
+.jmt-cal-day.booked {
+    background: #f9d6d8;
+    border-color: #ed9fa8;
+    color: #a92737;
+    opacity: 1
+}
+
+.jmt-cal-day.selected {
+    background: #273b51;
+    border-color: #273b51;
+    color: white
+}
+
+.jmt-cal-day.past,
+.jmt-cal-day.unknown {
+    color: #aaa;
+    background: #eceeed
+}
+
+.jmt-cal-day:focus-visible {
+    outline: 3px solid #d92537;
+    outline-offset: 2px
+}
+
+.jmt-cal-legend {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.7;
+    margin-top: 16px
+}
+
+.jmt-cal-message {
+    background: #ebf0f1;
+    color: #314b56;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 12px 0 0;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.6
+}
+
+.jmt-cal-message.jmt-cal-warning {
+    background: #fff0f0;
+    color: #ae2935
+}
+
+.jmt-terms p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #4a5558;
+    margin: 10px 0
+}
+
+.jmt-agree {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: #f4f6f5;
+    border: 1px solid #dfe4e1;
+    border-radius: 9px;
+    padding: 16px;
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: 700
+}
+
+.jmt-agree input {
+    width: 20px;
+    height: 20px;
+    accent-color: #d92537;
+    flex-shrink: 0
+}
+
+.jmt-validation {
+    display: block;
+    margin-top: 4px;
+    font-size: 11px;
+    color: #168047
+}
+
+.jmt-validation.bad {
+    color: #c72a37
+}
+
+.form-grid input.jmt-invalid {
+    border-color: #cf3743
+}
+
+.form-grid input.jmt-valid {
+    border-color: #26995f
+}
+
+.jmt-detail-shell {
+    padding: 45px 0 85px
+}
+
+.jmt-back {
+    display: inline-flex;
+    margin-bottom: 24px;
+    font-size: 13px;
+    color: #424c51;
+    text-decoration: none;
+    font-weight: 800
+}
+
+.jmt-detail-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(320px, .78fr);
+    gap: 24px;
+    align-items: start
+}
+
+.jmt-panel {
+    background: #fff;
+    border: 1px solid #e4e6e6;
+    border-radius: 13px;
+    padding: 22px;
+    min-width: 0
+}
+
+.jmt-detail-left .jmt-panel+.jmt-panel {
+    margin-top: 20px
+}
+
+.jmt-photo-main {
+    width: 100%;
+    height: 355px;
+    border: 0;
+    border-radius: 11px;
+    background: radial-gradient(circle at 50% 45%, #fff, #e4e7e7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-in
+}
+
+.jmt-photo-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-height: 330px
+}
+
+.jmt-photo-thumbs {
+    display: flex;
+    gap: 9px;
+    margin: 12px 0
+}
+
+.jmt-photo-thumbs button {
+    height: 72px;
+    width: 112px;
+    border: 2px solid #e3e5e5;
+    border-radius: 7px;
+    padding: 5px;
+    background: #f6f7f7;
+    cursor: pointer
+}
+
+.jmt-photo-thumbs button.active {
+    border-color: #d92537
+}
+
+.jmt-photo-thumbs img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain
+}
+
+.jmt-detail-title {
+    font-size: clamp(30px, 3vw, 44px);
+    margin: 8px 0;
+    letter-spacing: -1px
+}
+
+.jmt-detail-desc {
+    font-size: 14px;
+    color: #5c676b;
+    line-height: 1.75
+}
+
+.jmt-detail-spec {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+    margin: 20px 0
+}
+
+.jmt-detail-spec>div {
+    background: #f3f5f5;
+    border-radius: 8px;
+    padding: 12px
+}
+
+.jmt-detail-spec small {
+    display: block;
+    color: #797f81;
+    font-size: 10px
+}
+
+.jmt-detail-spec b {
+    display: block;
+    font-size: 14px;
+    margin-top: 4px
+}
+
+.jmt-detail-rate {
+    font-size: 29px;
+    color: #cf1f30;
+    font-weight: 900;
+    margin: 12px 0
+}
+
+.jmt-detail-dates {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 18px 0
+}
+
+.jmt-detail-dates label {
+    font-size: 12px;
+    font-weight: 800
+}
+
+.jmt-detail-dates input {
+    width: 100%;
+    display: block;
+    margin-top: 7px;
+    border: 1px solid #ced3d5;
+    border-radius: 8px;
+    padding: 11px 7px
+}
+
+.jmt-detail-status {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #187449;
+    margin: 9px 0
+}
+
+.jmt-detail-status.jmt-error {
+    color: #c52937
+}
+
+.jmt-detail-estimate {
+    font-size: 20px;
+    font-weight: 900;
+    margin: 14px 0
+}
+
+.jmt-detail-book {
+    width: 100%;
+    border: 0;
+    cursor: pointer
+}
+
+.jmt-detail-book:disabled {
+    opacity: .4;
+    cursor: not-allowed
+}
+
+.jmt-return-note {
+    margin-top: 17px;
+    background: #f5f6f5;
+    padding: 14px;
+    border-radius: 9px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #566067
+}
+
+.jmt-photo-dialog {
+    width: min(95vw, 1000px);
+    max-width: 1000px;
+    border: 0;
+    border-radius: 12px;
+    padding: 15px;
+    background: #f6f6f6
+}
+
+.jmt-photo-dialog::backdrop {
+    background: #000c
+}
+
+.jmt-photo-dialog img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain
+}
+
+.jmt-photo-close {
+    display: block;
+    margin: 0 0 8px auto;
+    border: 0;
+    border-radius: 8px;
+    background: #20272b;
+    color: #fff;
+    padding: 10px 13px;
+    cursor: pointer
+}
+
+.jmt-admin-page {
+    padding: 55px 0 90px
+}
+
+.jmt-admin-page h1 {
+    font-size: clamp(29px, 4vw, 48px);
+    margin: 10px 0
+}
+
+.jmt-admin-warning {
+    background: #fff5e5;
+    border: 1px solid #ead1a1;
+    padding: 15px;
+    border-radius: 9px;
+    color: #674a16;
+    line-height: 1.6;
+    font-size: 13px
+}
+
+.jmt-admin-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 25px 0
+}
+
+.jmt-admin-card {
+    padding: 19px;
+    background: #131e32;
+    color: #fff;
+    border-radius: 10px
+}
+
+.jmt-admin-card span {
+    font-size: 12px;
+    color: #c8d0de
+}
+
+.jmt-admin-card strong {
+    display: block;
+    font-size: 37px;
+    color: #ff7f32;
+    margin-top: 9px
+}
+
+.jmt-admin-section {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    padding: 22px;
+    border-radius: 12px;
+    margin: 20px 0
+}
+
+.jmt-admin-section h2 {
+    font-size: 20px;
+    margin-bottom: 16px
+}
+
+.jmt-admin-calendar-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px
+}
+
+.jmt-admin-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin-top: 10px
+}
+
+.jmt-admin-day {
+    background: #e7ebf1;
+    padding: 14px 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 12px
+}
+
+.jmt-admin-day.busy {
+    background: #ff8a38;
+    color: #111;
+    font-weight: 900
+}
+
+.jmt-admin-month-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.jmt-admin-month-actions button {
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 6px 12px;
+    border-radius: 7px;
+    cursor: pointer
+}
+
+@media(max-width:900px) {
+    .jmt-detail-grid {
+        grid-template-columns: 1fr
+    }
+}
+
+@media(max-width:600px) {
+    .jmt-calendar {
+        padding: 12px
+    }
+
+    .jmt-cal-week,
+    .jmt-cal-days {
+        gap: 3px
+    }
+
+    .jmt-cal-day,
+    .jmt-cal-empty {
+        height: 36px
+    }
+
+    .jmt-detail-shell {
+        padding: 25px 0 70px
+    }
+
+    .jmt-panel {
+        padding: 13px
+    }
+
+    .jmt-photo-main {
+        height: 240px
+    }
+
+    .jmt-photo-main img {
+        max-height: 225px
+    }
+
+    .jmt-admin-stats {
+        grid-template-columns: 1fr
+    }
+
+    .jmt-detail-dates {
+        grid-template-columns: 1fr
+    }
+}

@@ -1,0 +1,723 @@
+/*
+ * JMT Express Rentals — scheduling + approval workflow styling
+ * Kept separate from style.css to preserve the recovered design.
+ */
+
+/* The inherited CSS contains these controls; honor their hidden state. */
+[hidden] {
+    display: none !important;
+}
+
+.schedule-disclaimer {
+    margin: 17px 0 0;
+    padding: 13px 15px;
+    border-left: 3px solid #d92732;
+    background: #f6f5f2;
+    border-radius: 5px;
+    color: #535b5d;
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+.booking-form .form-grid label {
+    min-width: 0;
+}
+
+.booking-form .form-grid select,
+.booking-form .form-grid input[type="time"] {
+    width: 100%;
+    min-width: 0;
+}
+
+.booking-summary .summary-status {
+    line-height: 1.65;
+}
+
+/* Booking request states */
+.request-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 11px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 800;
+    white-space: nowrap;
+    color: #333;
+    background: #eee;
+}
+
+.status-pending {
+    background: #fff0cb;
+    color: #8c5a04;
+}
+
+.status-approved,
+.status-completed {
+    background: #d8f1e4;
+    color: #12623e;
+}
+
+.status-ongoing {
+    background: #dbeafd;
+    color: #254f84;
+}
+
+.status-rejected,
+.status-cancelled {
+    background: #ffe0e1;
+    color: #a12633;
+}
+
+.reference-lookup {
+    max-width: 650px;
+    padding: 23px;
+    margin: 0 0 27px;
+    border: 1px solid #e2e2e0;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.reference-lookup label {
+    display: block;
+    margin-bottom: 11px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.lookup-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.lookup-controls input {
+    flex: 1;
+    min-width: 175px;
+    padding: 12px;
+    border: 1px solid #d6d8d9;
+    border-radius: 7px;
+}
+
+#booking-lookup-result {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Staff demonstration login */
+.staff-login-page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 35px 16px;
+    background: radial-gradient(circle at 70% 20%, #32383b, #131618 65%);
+}
+
+.staff-login-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 35px;
+    color: #24282b;
+    background: #fff;
+    border-radius: 17px;
+    box-shadow: 0 22px 70px #0005;
+}
+
+.staff-login-card h1 {
+    margin: 7px 0 12px;
+    font-size: 32px;
+    letter-spacing: -1px;
+}
+
+.staff-login-card p {
+    line-height: 1.6;
+    font-size: 13px;
+    color: #62686a;
+}
+
+.staff-home-link {
+    color: #42484b;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.staff-symbol {
+    display: inline-block;
+    margin: 28px 0 16px;
+    font-size: 44px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -3px;
+    color: #d92732;
+}
+
+.staff-login-card .staff-warning {
+    margin: 20px 0;
+    padding: 14px;
+    border: 1px solid #efc88c;
+    border-radius: 8px;
+    color: #754b0c;
+    background: #fff5e8;
+}
+
+.staff-login-card form label {
+    display: block;
+    margin: 20px 0 8px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.staff-login-card form input {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccd0d2;
+    border-radius: 7px;
+}
+
+.staff-login-card form button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.staff-login-card .staff-hint {
+    margin: 16px 0 0;
+    font-size: 12px;
+}
+
+.staff-hint code {
+    color: #a82532;
+    font-weight: 800;
+}
+
+/* Staff dashboard */
+.staff-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.staff-nav a,
+.staff-nav button {
+    font-size: 12px;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+}
+
+.staff-nav button {
+    padding: 10px 12px;
+    background: #d92732;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.staff-stat-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.staff-section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 17px;
+}
+
+.staff-section-heading h2 {
+    margin: 0;
+}
+
+.staff-section-heading label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color: #525c5f;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.staff-section-heading select {
+    min-width: 155px;
+    padding: 10px 12px;
+    background: #fff;
+    border: 1px solid #d5d8d9;
+    border-radius: 6px;
+}
+
+.staff-actions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    min-width: 150px;
+}
+
+.staff-action-button {
+    border: 1px solid #bfd1de;
+    border-radius: 5px;
+    padding: 8px 10px;
+    background: #e7f0f8;
+    color: #244f73;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.staff-action-button.danger {
+    color: #a42a34;
+    background: #fff1f1;
+    border-color: #e9b8bc;
+}
+
+.staff-action-button:hover {
+    filter: brightness(.96);
+}
+
+.staff-action-message {
+    color: #536166;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.staff-fleet-overview {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 11px;
+    margin-top: 22px;
+}
+
+.staff-fleet-item {
+    padding: 15px;
+    background: #f5f6f6;
+    border: 1px solid #e7e8e7;
+    border-radius: 8px;
+}
+
+.staff-fleet-item strong,
+.staff-fleet-item small {
+    display: block;
+}
+
+.staff-fleet-item small {
+    margin-top: 5px;
+    font-size: 11px;
+    color: #787f81;
+}
+
+.jmt-admin-days button.jmt-admin-day {
+    border: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+.jmt-admin-days button.jmt-admin-day:hover {
+    outline: 2px solid #ce2332;
+}
+
+@media (max-width: 1000px) {
+    .staff-stat-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 680px) {
+    .staff-login-card {
+        padding: 23px;
+    }
+
+    .staff-login-card h1 {
+        font-size: 26px;
+    }
+
+    .staff-nav {
+        justify-content: end;
+    }
+
+    .staff-stat-grid,
+    .staff-fleet-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .staff-section-heading {
+        align-items: start;
+    }
+
+    .jmt-admin-days {
+        gap: 3px;
+    }
+
+    .jmt-admin-day {
+        padding: 10px 2px;
+    }
+
+    .lookup-controls .button {
+        width: 100%;
+    }
+}
+
+
+
+/* Unified Sign In and Sign Up Page */
+
+.access-page {
+    min-height: 100vh;
+    background: #f5f4f2;
+}
+
+.access-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+.access-showcase {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    min-width: 0;
+    padding: 42px clamp(25px, 5vw, 72px);
+    overflow: hidden;
+    color: #fff;
+    background: radial-gradient(circle at 55% 55%,
+            #373e42,
+            #191d20 56%,
+            #111315);
+}
+
+.access-brand {
+    align-self: flex-start;
+    display: flex;
+    align-items: baseline;
+    gap: 9px;
+    color: #fff;
+    font-size: 29px;
+    font-weight: 900;
+    font-style: italic;
+    text-decoration: none;
+    letter-spacing: -1.6px;
+}
+
+.access-slashes {
+    color: #e12a39;
+    letter-spacing: -9px;
+    padding-right: 11px;
+}
+
+.access-brand small {
+    font-size: 10px;
+    letter-spacing: 1.3px;
+    font-style: normal;
+}
+
+.access-feature {
+    position: relative;
+    z-index: 1;
+    padding: 35px 0;
+}
+
+.access-eyebrow {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #e63946;
+}
+
+.access-feature h1 {
+    font-size: clamp(40px, 4.7vw, 70px);
+    line-height: 1.06;
+    letter-spacing: -3px;
+    margin: 18px 0;
+}
+
+.access-feature h1 span {
+    color: #e32b39;
+}
+
+.access-feature>p:not(.access-eyebrow) {
+    max-width: 430px;
+    line-height: 1.7;
+    color: #bbc0c4;
+}
+
+.access-feature img {
+    width: min(110%, 680px);
+    margin: 18px auto 0;
+    filter: drop-shadow(0 22px 18px #0008);
+}
+
+.access-credit {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #8f969a;
+}
+
+/* Right Panel */
+
+.access-right {
+    padding: 42px clamp(20px, 5vw, 75px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.access-back {
+    color: #586064;
+    font-weight: 800;
+    font-size: 12px;
+    text-decoration: none;
+    margin-bottom: 38px;
+}
+
+.access-back:hover {
+    color: #d92732;
+}
+
+.access-card {
+    max-width: 485px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.access-card h2 {
+    font-size: clamp(29px, 3vw, 42px);
+    letter-spacing: -1.8px;
+    margin: 10px 0;
+}
+
+.access-description {
+    color: #697074;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0 0 25px;
+}
+
+/* Sign In and Sign Up Tabs */
+
+.access-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    background: #e6e7e7;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 24px;
+}
+
+.access-tabs button {
+    border: 0;
+    background: transparent;
+    border-radius: 7px;
+    padding: 12px;
+    font-size: 13px;
+    font-weight: 800;
+    color: #71777b;
+}
+
+.access-tabs button.active {
+    background: white;
+    color: #24292c;
+    box-shadow: 0 2px 9px #00000016;
+}
+
+/* Form Fields */
+
+.access-field {
+    margin-bottom: 17px;
+}
+
+.access-field[hidden],
+.access-message[hidden] {
+    display: none;
+}
+
+.access-field label {
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    color: #30363a;
+    margin-bottom: 8px;
+}
+
+.access-field input {
+    width: 100%;
+    min-width: 0;
+    padding: 14px 15px;
+    border: 1px solid #cfd3d4;
+    background: #fff;
+    color: #171d20;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.access-field input:focus {
+    border-color: #d92732;
+    outline: 2px solid #d9273238;
+}
+
+.access-submit {
+    width: 100%;
+    padding: 15px;
+    background: #d92732;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    border: 0;
+    border-radius: 8px;
+    margin-top: 7px;
+}
+
+.access-submit:hover {
+    background: #b51f29;
+}
+
+/* Feedback */
+
+.access-message {
+    padding: 12px 14px;
+    margin: 15px 0 0;
+    border-radius: 7px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.access-message.success {
+    background: #e5f3eb;
+    color: #21734a;
+}
+
+.access-message.error {
+    background: #fbe6e8;
+    color: #9d2632;
+}
+
+.access-guest {
+    display: block;
+    text-align: center;
+    padding: 13px;
+    color: #3d4549;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.access-guest:hover {
+    color: #d92732;
+}
+
+/* Staff Demo Information */
+
+.access-demo-info {
+    border-top: 1px solid #d9dcdd;
+    margin-top: 18px;
+    padding-top: 19px;
+    color: #5f676b;
+    font-size: 12px;
+}
+
+.access-demo-info summary {
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.access-demo-info p {
+    margin: 9px 0;
+}
+
+.access-demo-info code {
+    font-size: 12px;
+    color: #a5222d;
+}
+
+.access-disclaimer {
+    border-left: 3px solid #d92732;
+    padding: 10px 13px;
+    background: #eeeef0;
+    margin: 22px 0 0;
+    font-size: 11px;
+    line-height: 1.7;
+    color: #6c7275;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 900px) {
+    .access-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .access-showcase {
+        min-height: 250px;
+        padding: 25px;
+    }
+
+    .access-feature {
+        padding: 25px 0 5px;
+    }
+
+    .access-feature h1 {
+        font-size: 34px;
+        letter-spacing: -1px;
+    }
+
+    .access-feature img {
+        display: none;
+    }
+
+    .access-credit {
+        display: none;
+    }
+
+    .access-right {
+        padding: 28px 20px 50px;
+    }
+
+    .access-back {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .access-showcase {
+        min-height: 185px;
+    }
+
+    .access-feature h1 {
+        font-size: 29px;
+    }
+
+    .access-feature>p:not(.access-eyebrow) {
+        font-size: 12px;
+    }
+
+    .access-brand {
+        font-size: 24px;
+    }
+
+    .access-brand small {
+        font-size: 8px;
+    }
+}
+
+
+
+.site-nav a.nav-signin {
+    border: 1px solid #62686d;
+    border-radius: 6px;
+    padding: 12px 15px;
+    color: #fff;
+}
+
+.site-nav a.nav-signin:hover {
+    background: #292f32;
+}
+
+@media (max-width: 860px) {
+    .site-nav a.nav-signin {
+        margin-top: 7px;
+        text-align: center;
+    }
+}

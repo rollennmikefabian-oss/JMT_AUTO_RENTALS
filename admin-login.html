@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | JMT Auto Rentals</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/features.css">
+    <link rel="stylesheet" href="css/workflow.css">
+    <script defer src="js/admin-login.js"></script>
+    <link rel="icon" href="images/favicon.ico?v=2" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=2">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/brand-redesign.css">
+</head>
+<body data-page="login">
+
+<main class="access-page">
+    <div class="access-layout">
+
+        <!-- Left side: Branding -->
+        <section class="access-showcase">
+            <a href="index.html" class="access-brand">
+                <img src="images/jmt-icon.webp" alt="" width="57" height="57">
+                <span><b>JMT</b><small>AUTO RENTALS</small></span>
+            </a>
+
+            <div class="access-feature">
+                <p class="access-eyebrow">YOUR ROAD. YOUR CHOICE.</p>
+                <h1>YOUR NEXT RIDE<br>STARTS HERE<span>.</span></h1>
+
+                <p>
+                    Browse vehicles, request a rental, and manage
+                    your demo booking in one place.
+                </p>
+
+                <img class="access-car" src="images/hero-toyota-innova.png"
+                    alt="Red sedan showroom illustration">
+            </div>
+
+            <p class="access-credit">
+                JMT AUTO RENTALS · CLASSROOM PROTOTYPE
+            </p>
+        </section>
+
+        <!-- Right side: Account forms -->
+        <section class="access-right">
+            <a href="index.html" class="access-back">
+                ← Back to website
+            </a>
+
+            <div class="access-card">
+                <p class="access-eyebrow">WELCOME TO JMT AUTO RENTALS</p>
+                <h2 id="access-heading">Welcome back</h2>
+
+                <p id="access-description" class="access-description">
+                    Sign in to continue to your rental dashboard preview.
+                </p>
+
+                <div class="access-tabs" role="group"
+                    aria-label="Account options">
+
+                    <button type="button" class="active"
+                        data-access-mode="signin" aria-pressed="true">
+                        Sign In
+                    </button>
+
+                    <button type="button"
+                        data-access-mode="signup" aria-pressed="false">
+                        Sign Up
+                    </button>
+                </div>
+
+                <form id="access-form">
+
+                    <div class="access-field" id="access-name-row" hidden>
+                        <label for="access-name">Full name</label>
+                        <input type="text" id="access-name"
+                            placeholder="Your complete name"
+                            autocomplete="name"
+                            minlength="3" maxlength="70">
+                    </div>
+
+                    <div class="access-field">
+                        <label for="access-email">Email address</label>
+                        <input type="email" id="access-email"
+                            placeholder="you@example.com"
+                            autocomplete="email" required>
+                    </div>
+
+                    <div class="access-field">
+                        <label for="access-password">Password</label>
+                        <input type="password" id="access-password"
+                            placeholder="At least 6 characters"
+                            autocomplete="current-password"
+                            minlength="6" required>
+                    </div>
+
+                    <div class="access-field" id="access-confirm-row" hidden>
+                        <label for="access-confirm">Confirm password</label>
+                        <input type="password" id="access-confirm"
+                            placeholder="Repeat password"
+                            autocomplete="new-password">
+                    </div>
+
+                    <button type="submit" class="access-submit"
+                        id="access-submit">
+                        Sign In →
+                    </button>
+
+                    <p id="access-message" class="access-message"
+                        role="status" aria-live="polite" hidden></p>
+                </form>
+
+                <a href="reservations.html" class="access-guest">
+                    Continue as guest →
+                </a>
+
+                <p class="access-disclaimer">
+                    Classroom demonstration only. No customer accounts
+                    are created or saved. Staff access is simulated in
+                    this browser and is not secure authentication.
+                </p>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+</body>
+</html>

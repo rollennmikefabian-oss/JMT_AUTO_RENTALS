@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101316">
+  <meta name="description"
+    content="JMT Auto Rentals classroom vehicle-booking website prototype, no live payments or reservations.">
+  <title>Home · JMT Auto Rentals</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+    <link rel="icon" href="images/favicon.ico?v=2" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=2">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/brand-redesign.css">
+</head>
+
+<body data-page="home"><a href="#main" class="skip-link">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap container">
+      <a class="brand" href="index.html" aria-label="JMT Auto Rentals home">
+                <img class="brand-icon" src="images/jmt-icon.webp" alt="" width="46" height="46">
+                <span class="brand-name"><b>JMT</b><small>AUTO RENTALS</small></span>
+            </a>
+      <button type="button" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"
+        aria-controls="site-nav"><span></span><span></span><span></span></button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+                <a class="is-current" href="index.html" aria-current="page">Home</a>
+                <a href="vehicles.html">Vehicles</a>
+                <a href="availability.html">Availability</a>
+                <a href="reservations.html">My Requests</a>
+                <a href="about.html">About</a>
+                <a class="nav-cta " href="booking.html">Request a Ride</a>
+                <a class="nav-signin " href="admin-login.html">Sign In</a>
+            </nav>
+      
+    </div>
+
+  </header>
+
+  <main id="main">
+    <div class="intro" id="intro" aria-label="JMT Auto Rentals cinematic introduction">
+      <div class="intro-cover" id="intro-cover" aria-hidden="true">
+        <div class="intro-road"></div>
+      </div>
+      <div class="intro-lightwash" aria-hidden="true"></div>
+      <div class="intro-brand-reveal" aria-hidden="true">
+        <div class="intro-brand-mark">
+                <img class="intro-brand-art" src="images/jmt-chrome-intro.webp" alt="">
+            </div>
+        <p class="intro-brand-line">YOUR JOURNEY<br>STARTS HERE<span>.</span></p>
+        <span class="intro-brand-tag">THE ROAD IS YOURS</span>
+      </div>
+      <div class="intro-car-shell" id="intro-car-shell" aria-hidden="true">
+        <div class="intro-beam"></div>
+        <div class="intro-lamp-glow intro-lamp-main"></div>
+        <div class="intro-lamp-glow intro-lamp-secondary"></div>
+        <img class="intro-car-fallback" src="images/intro-hilux-travo.png" alt="">
+      </div>
+      <button class="intro-skip" id="skip-intro" type="button">Skip intro →</button>
+    </div>
+    <section class="home-hero">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow">VEHICLE RENTALS</p>
+          <h1>FIND THE RIDE<br>THAT FITS <em>YOUR</em><br>JOURNEY<span class="red">.</span></h1>
+          <p class="hero-lede">From quick city trips to weekend escapes. Choose your vehicle, check your dates, and make
+            a demo rental request in a few steps.</p>
+          <div class="hero-actions"><a class="button button-red" href="categories.html">Explore vehicles
+              <span>↗</span></a><a class="button button-ghost" href="booking.html">Request a ride <span>→</span></a></div>
+          <p class="tiny-note">Sample showroom · No payments · No actual reservations</p>
+        </div>
+        <div class="hero-stage"><span class="hero-stage-label">THE JOURNEY STARTS HERE / 2026</span>
+          <div class="hero-halo"></div><img src="images/hero-toyota-innova.png" class="hero-feature-car"
+            alt="Silver Toyota Innova on the JMT Auto Rentals homepage" /><span class="hero-stage-index">01 /
+            JMT</span>
+        </div>
+      </div>
+      <div class="home-bottom container"><span>BUILT FOR WHEREVER YOU'RE GOING</span><button type="button"
+          class="replay-link" id="replay-intro">↻ Replay opening</button></div>
+    </section>
+    <section class="brand-manifesto" aria-label="JMT Auto Rentals identity">
+        <div class="container brand-manifesto-grid">
+          <div class="brand-manifesto-logo">
+            <img src="images/jmt-chrome-logo.webp" loading="lazy" alt="JMT racing-inspired chrome and red logo">
+          </div>
+          <div class="brand-manifesto-copy">
+            <p class="eyebrow">BUILT FOR THE DRIVE</p>
+            <h2>Make every mile <em>yours.</em></h2>
+            <p>From city errands to weekend escapes, find the vehicle that fits your plans. Discover your options, check dates and send a rental request.</p>
+            <a class="text-arrow" href="vehicles.html">Discover the fleet <span>↗</span></a>
+          </div>
+        </div>
+    </section>
+    <section class="home-short">
+      <div class="container">
+        <div class="home-short-head">
+          <p class="eyebrow">HOW IT WORKS</p>
+          <h2>A rental experience,<br>minus the complicated stuff.</h2>
+        </div>
+        <div class="three-steps">
+          <article><span>01</span>
+            <h3>Explore the fleet</h3>
+            <p>Choose Sedan, SUV, MPV, Van, or Pickup.</p>
+          </article>
+          <article><span>02</span>
+            <h3>Choose your dates</h3>
+            <p>See sample availability and an instant rental-day estimate.</p>
+          </article>
+          <article><span>03</span>
+            <h3>Review a demo booking</h3>
+            <p>Submit a browser-only booking with no real payment.</p>
+          </article>
+        </div><a href="categories.html" class="text-arrow">Browse the vehicle types <span>↗</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-logo">
+                    <img class="footer-icon" src="images/jmt-icon.webp" alt="" width="53" height="53">
+                    <span class="footer-wordmark"><b>JMT</b><span>AUTO RENTALS</span></span>
+                </div>
+        <p>Find a ride that fits your journey. Made as an ITWS 02 classroom front-end case-study prototype.</p>
+      </div>
+      <div><b>Explore</b><a href="categories.html">Vehicle Types</a><a href="vehicles.html">All Models</a><a
+          href="availability.html">Availability</a></div>
+      <div><b>Get started</b><a href="booking.html">Demo Booking</a><a href="reservations.html">My Demo Bookings</a><a
+          href="about.html">Project Information</a></div>
+    </div>
+    <div class="footer-bottom container"><span>© 2026 JMT Auto Rentals · Student prototype</span><span>No payments ·
+        No server · Sample vehicles and rates</span></div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>
